@@ -9,6 +9,5 @@ nodemon.json
 yarn.lock
 dist
 build
-public
 node_modules
 vercel.json
