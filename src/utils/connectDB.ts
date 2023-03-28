@@ -1,12 +1,14 @@
 import mongoose from 'mongoose'
 import CONFIG from '../config/environment'
+import { logger } from './logger'
 
 mongoose
   .connect(`${CONFIG.db}`)
   .then(() => {
-    console.log('Connected to MongoDB')
+    logger.info('Connected to MongoDB')
   })
   .catch((error) => {
-    console.log('Could not connect to DB')
-    console.log(error)
+    logger.info('Could not connect to DB')
+    logger.error(error)
+    process.exit(1)
   })

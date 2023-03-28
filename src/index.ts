@@ -3,6 +3,7 @@ import bodyParser from 'body-parser'
 import { routes } from './routes'
 import cors from 'cors'
 import './utils/connectDB'
+import { logger } from './utils/logger'
 
 const app: Application = express()
 const port: number = 9000
@@ -20,5 +21,5 @@ app.use((req: Request, res: Response, next: NextFunction) => {
 routes(app)
 
 app.listen(port, () => {
-  console.log(`Server is listening on port ${port}`)
+  logger.info(`Server is listening on port ${port}`)
 })
