@@ -110,23 +110,33 @@ Maulana Rheza Ardiansyah - [@maulanarheza](https://www.linkedin.com/in/maulanarh
 
 <p align="right">(<a href="#rheza-top">back to top</a>)</p>
 
+* [![TypeScript][TypeScript]][TypeScript-url]
+* [![Express][Express.js]][Express-url]
+* [![MongoDB][MongoDB]][MongoDB-url]
+* [![Vercel][Vercel]][Vercel-url]
+* [![Postman][Postman]][Postman-url]
+* [![Husky][Postman]][Postman-url]
+* [![Joi][Postman]][Postman-url]
+* [![Mongoose][Postman]][Postman-url]
+* [![Pino][Postman]][Postman-url]
 
 <!-- LINKS -->
 [product-screenshot]: https://fazzpay.up.railway.app/images/fazzpay-landing.png
 [fazzpay-db-schema]: https://fazzpay.up.railway.app/images/db-schema.png
 [Express.js]: https://img.shields.io/badge/Express.js-20232A?style=for-the-badge&logo=express&logoColor=61DAFB
 [Express-url]: https://expressjs.com/
-[Supabase]: https://img.shields.io/badge/Supabase-20232A?style=for-the-badge&logo=supabase&logoColor=61DAFB
-[Supabase-url]: https://supabase.com/
-[Cyclic]: https://img.shields.io/badge/Cyclic.sh-20232A?style=for-the-badge&logo=cyclic.sh&logoColor=61DAFB
-[Cyclic-url]: http://www.cyclic.sh/
-[Railway]: https://img.shields.io/badge/Railway-20232A?style=for-the-badge&logo=railway&logoColor=61DAFB
-[Railway-url]: http://www.railway.app/
-[PostgreSQL]: https://img.shields.io/badge/PostgreSQL-20232A?style=for-the-badge&logo=postgresql&logoColor=61DAFB
-[PostgreSQL-url]: https://www.postgresql.org/
+[TypeScript]: https://img.shields.io/badge/Typescript-20232A?style=for-the-badge&logo=typescript&logoColor=61DAFB
+[TypeScript-url]: https://www.typescriptlang.org/
+[Vercel]: https://img.shields.io/badge/Vercel-20232A?style=for-the-badge&logo=vercel&logoColor=61DAFB
+[Vercel-url]: https://vercel.com/
+[MongoDB]: https://img.shields.io/badge/MongoDB-20232A?style=for-the-badge&logo=mongodb&logoColor=61DAFB
+[MongoDB-url]: https://www.mongodb.com/
+[Husky]: https://img.shields.io/badge/Husky-20232A?style=for-the-badge&logo=husky&logoColor=61DAFB
+[Husky-url]: https://www.npmjs.com/package/husky
 [Postman]: https://img.shields.io/badge/Postman-20232A?style=for-the-badge&logo=postman&logoColor=61DAFB
 [Postman-url]: https://www.postman.com/
-[DrawSQL]: https://img.shields.io/badge/Drawsql-20232A?style=for-the-badge&logo=drawSQL&logoColor=61DAFB
-[Drawsql-url]: https://drawsql.app/
-
+[Joi]: https://img.shields.io/badge/Joi-20232A?style=for-the-badge&logo=joi&logoColor=61DAFB
+[Joi-url]: https://joi.dev/
+[Mongoose]: https://img.shields.io/badge/Mongoose-20232A?style=for-the-badge&logo=mongoose&logoColor=61DAFB
+[Mongoose-url]: https://mongoosejs.com/
 
