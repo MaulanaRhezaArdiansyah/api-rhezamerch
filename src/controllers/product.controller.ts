@@ -1,10 +1,36 @@
 import { Request, Response } from 'express'
 import { logger } from '../utils/logger'
-import { addProductToDB, deleteProductById, getProductFromDB, updateProductById } from '../services/product.service'
+import {
+  addProductToDB,
+  deleteProductById,
+  getProductById,
+  getProductFromDB,
+  updateProductById
+} from '../services/product.service'
 import { v4 as uuidv4 } from 'uuid'
 import { createProductValidation, updateProductValidation } from '../validations/product.validation'
 
 export const getProduct = async (req: Request, res: Response) => {
+  const {
+    params: { id }
+  } = req
+
+  if (id) {
+    const product = await getProductById(id)
+    if (!product) {
+      logger.info('Product not found')
+      return res.status(404).send({ status: false, statusCode: 404, data: {}, message: 'Product not found!' })
+    } else {
+      logger.info('Successfully get detail product')
+      return res.status(200).send({
+        status: true,
+        statusCode: 200,
+        data: product,
+        message: 'Successfully get detail product'
+      })
+    }
+  }
+
   try {
     const products: unknown = await getProductFromDB()
     logger.info('Succesfully get all product data.')
