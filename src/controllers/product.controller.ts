@@ -9,6 +9,7 @@ import {
 } from '../services/product.service'
 import { v4 as uuidv4 } from 'uuid'
 import { createProductValidation, updateProductValidation } from '../validations/product.validation'
+import { unlink } from 'fs-extra'
 
 export const getProduct = async (req: Request, res: Response) => {
   const {
@@ -47,11 +48,17 @@ export const getProduct = async (req: Request, res: Response) => {
 
 export const createProduct = async (req: Request, res: Response) => {
   req.body.product_id = uuidv4()
-  const { error, value } = createProductValidation(req.body)
+  const image = req.file?.filename
+  const { error, value } = createProductValidation({ ...req.body, image })
 
   if (error) {
     logger.error(`ERROR: product - create = ${error?.details[0].message}`)
     return res.status(422).send({ status: false, statusCode: 422, message: error?.details[0].message })
+  }
+
+  if (!image) {
+    logger.info('Product image is required')
+    return res.status(422).send({ status: false, statusCode: 422, message: 'Product image is required' })
   }
 
   try {
@@ -69,7 +76,9 @@ export const updateProduct = async (req: Request, res: Response) => {
     params: { id }
   } = req
 
-  const { error, value } = updateProductValidation(req.body)
+  const image = req.file?.filename
+
+  const { error, value } = updateProductValidation({ ...req.body, image })
 
   if (error) {
     logger.error(`ERROR: product - update = ${error?.details[0].message}`)
@@ -82,8 +91,25 @@ export const updateProduct = async (req: Request, res: Response) => {
       logger.info('Product not found')
       return res.status(404).send({ status: false, statusCode: 404, message: 'Product not found' })
     }
-    logger.info('Successfully update product')
-    return res.status(200).send({ status: true, statusCode: 200, data: value, message: 'Successfully update product' })
+
+    if (!image) {
+      logger.info('Successfully update product')
+      return res
+        .status(200)
+        .send({ status: true, statusCode: 200, data: value, message: 'Successfully update product' })
+    }
+
+    unlink(`public/uploads/${result.image}`, (err) => {
+      if (err) {
+        return err
+      }
+      logger.info(`Successfully deleted ${result.image}`)
+    })
+
+    logger.info('Successfully update product with upload image')
+    return res
+      .status(200)
+      .send({ status: true, statusCode: 200, data: value, message: 'Successfully update product with upload image' })
   } catch (error) {
     logger.error(`ERROR: product - create = ${error}`)
     return res.status(422).send({ status: false, statusCode: 422, message: error })
@@ -101,6 +127,14 @@ export const deleteProduct = async (req: Request, res: Response) => {
       logger.info('Product not found')
       return res.status(404).send({ status: false, statusCode: 404, message: 'Product not found' })
     }
+
+    unlink(`public/uploads/${result.image}`, (err) => {
+      if (err) {
+        return err
+      }
+      logger.info(`Successfully deleted ${result.image}`)
+    })
+
     logger.info('Successfully delete product')
     return res.status(200).send({ status: true, statusCode: 200, message: 'Successfully delete product' })
   } catch (error) {

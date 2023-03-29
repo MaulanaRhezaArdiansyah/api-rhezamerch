@@ -8,7 +8,8 @@ export const createProductValidation = (payload: ProductType) => {
     price: Joi.number().required(),
     size: Joi.string().required(),
     stock: Joi.number().required(),
-    category: Joi.string().required()
+    category: Joi.string().required(),
+    image: Joi.string().required()
   })
   return schema.validate(payload)
 }
@@ -19,7 +20,8 @@ export const updateProductValidation = (payload: ProductType) => {
     price: Joi.number().allow('', null),
     size: Joi.string().allow('', null),
     stock: Joi.number().allow('', null),
-    category: Joi.string().allow('', null)
+    category: Joi.string().allow('', null),
+    image: Joi.string().allow('', null)
   })
   return schema.validate(payload)
 }
