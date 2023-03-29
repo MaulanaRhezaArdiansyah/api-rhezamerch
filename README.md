@@ -115,10 +115,10 @@ Maulana Rheza Ardiansyah - [@maulanarheza](https://www.linkedin.com/in/maulanarh
 * [![MongoDB][MongoDB]][MongoDB-url]
 * [![Vercel][Vercel]][Vercel-url]
 * [![Postman][Postman]][Postman-url]
-* [![Husky][Postman]][Postman-url]
-* [![Joi][Postman]][Postman-url]
-* [![Mongoose][Postman]][Postman-url]
-* [![Pino][Postman]][Postman-url]
+* [![Husky][Husky]][Husky-url]
+* [![Joi][Joi]][Joi-url]
+* [![Mongoose][Mongoose]][Mongoose-url]
+* [![Pino][Pino]][Pino-url]
 
 <!-- LINKS -->
 [product-screenshot]: https://fazzpay.up.railway.app/images/fazzpay-landing.png
@@ -139,4 +139,6 @@ Maulana Rheza Ardiansyah - [@maulanarheza](https://www.linkedin.com/in/maulanarh
 [Joi-url]: https://joi.dev/
 [Mongoose]: https://img.shields.io/badge/Mongoose-20232A?style=for-the-badge&logo=mongoose&logoColor=61DAFB
 [Mongoose-url]: https://mongoosejs.com/
+[Pino]: https://img.shields.io/badge/Pino-20232A?style=for-the-badge&logo=pino&logoColor=61DAFB
+[Pino-url]: https://github.com/pinojs/pino
 
