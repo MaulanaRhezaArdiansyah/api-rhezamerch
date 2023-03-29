@@ -110,15 +110,6 @@ Maulana Rheza Ardiansyah - [@maulanarheza](https://www.linkedin.com/in/maulanarh
 
 <p align="right">(<a href="#rheza-top">back to top</a>)</p>
 
-* [![TypeScript][TypeScript]][TypeScript-url]
-* [![Express][Express.js]][Express-url]
-* [![MongoDB][MongoDB]][MongoDB-url]
-* [![Vercel][Vercel]][Vercel-url]
-* [![Postman][Postman]][Postman-url]
-* [![Husky][Husky]][Husky-url]
-* [![Joi][Joi]][Joi-url]
-* [![Mongoose][Mongoose]][Mongoose-url]
-* [![Pino][Pino]][Pino-url]
 
 <!-- LINKS -->
 [product-screenshot]: https://fazzpay.up.railway.app/images/fazzpay-landing.png
