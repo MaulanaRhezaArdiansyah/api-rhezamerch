@@ -54,10 +54,10 @@
 * [![MongoDB][MongoDB]][MongoDB-url]
 * [![Vercel][Vercel]][Vercel-url]
 * [![Postman][Postman]][Postman-url]
-* [![Husky][Postman]][Postman-url]
-* [![Joi][Postman]][Postman-url]
-* [![Mongoose][Postman]][Postman-url]
-* [![Pino][Postman]][Postman-url]
+* [![Husky][Husky]][Husky-url]
+* [![Joi][Joi]][Joi-url]
+* [![Mongoose][Mongoose]][Mongoose-url]
+* [![Pino][Pino]][Pino-url]
 
 
 
