@@ -3,6 +3,6 @@ export default interface ProductType {
   title: string
   price: number
   size: string
-  stock: string
+  stock: number
   category: string
 }
