@@ -2,9 +2,11 @@ import express, { Application, NextFunction, Request, Response } from 'express'
 import bodyParser from 'body-parser'
 import cors from 'cors'
 import { routes } from '../routes'
+import deserializeUser from '../middlewares/deserializedUser'
 
 const createServer = () => {
   const app: Application = express()
+  app.use(deserializeUser)
 
   app.use(bodyParser.urlencoded({ extended: false }))
   app.use(bodyParser.json())
