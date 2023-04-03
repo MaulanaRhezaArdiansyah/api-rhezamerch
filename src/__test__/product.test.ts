@@ -17,7 +17,8 @@ const productPayload = {
   price: 3000000,
   size: '41',
   stock: 11,
-  category: 'Shoes'
+  category: 'Shoes',
+  image: 'asdasd.jpg'
 }
 
 const productPayloadCreate = {

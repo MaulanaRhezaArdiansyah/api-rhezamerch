@@ -7,6 +7,7 @@ import deserializeUser from '../middlewares/deserializedUser'
 const createServer = () => {
   const app: Application = express()
   app.use(deserializeUser)
+  app.use(express.static('public/uploads'))
 
   app.use(bodyParser.urlencoded({ extended: false }))
   app.use(bodyParser.json())

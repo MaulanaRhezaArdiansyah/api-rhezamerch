@@ -5,4 +5,5 @@ export default interface ProductType {
   size: string
   stock: number
   category: string
+  image: string
 }
