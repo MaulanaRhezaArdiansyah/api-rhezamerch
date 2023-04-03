@@ -4,7 +4,8 @@
   "description": "CRUD with MongoDB",
   "main": "index.js",
   "scripts": {
-    "start": "npx tsc -w",
+    "start": "node index.ts",
+    "start-tsc": "npx tsc -w",
     "dev": "npx nodemon",
     "build": "tsc",
     "format": "prettier --write .",
